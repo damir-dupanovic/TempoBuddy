@@ -8,8 +8,8 @@ from datetime import datetime
 issuesToken = "your_email_here:your_issues_token_here"
 tempoToken = "your_tempo_token_here"
 userId = "your_user_id_here"
-from = "2025-03-24"
-to = "2025-03-28"
+fromDate = "2025-03-24"
+toDate = "2025-03-28"
 
 encoded_text = base64.b64encode(issuesToken.encode("utf-8")).decode("utf-8")
 #print(encoded_text)
@@ -94,8 +94,8 @@ def print_to_file(file, issue_name, issue_type, worklog, parent_name=None, paren
 # Tempo API endpoint
 url = f"https://api.tempo.io/4/worklogs/user/{userId}"
 params = {
-    "from": from,
-    "to": to
+    "from": fromDate,
+    "to": toDate
 }
 
 # Set up headers with authorization
