@@ -1,0 +1,14 @@
+Tempo token
+https://apidocs.tempo.io/#section/Base-Paths-for-API-Access
+Issues token
+https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/#get-an-api-token
+
+To find user id send request to
+
+GET https://regusit.atlassian.net/rest/api/3/user/search?query={Name}
+
+headers = {
+  "Authorization": "base64JiraToken"
+}
+
+Its in response.accountid (which is basically userId)
