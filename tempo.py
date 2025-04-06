@@ -76,14 +76,14 @@ def print_to_file(file, issue_name, issue_type, worklog, parent_name=None, paren
     file.write(f"Description:\n")
     
     if parent_name:
-        file.write(f"{parent_name} ({parent_type})\n")
+        file.write(f"{parent_name}\n")
         file.write("\n")
-        file.write(f"{issue_name} ({issue_type})\n")
+        file.write(f"{issue_name}\n")
     else:
-        file.write(f"{issue_name} ({issue_type})\n")
+        file.write(f"{issue_name}\n")
     
     if issue_type == "Management" and worklog["description"]:
-        file.write(f"Worklog Description: {worklog['description']}\n")
+        file.write(f"{worklog['description']}\n")
     
     file.write("\n")
     file.write(f"Time spent: {seconds_to_hours_minutes(worklog['timeSpentSeconds'])}\n")
